@@ -1,0 +1,55 @@
+@model AgenciaMVC.Models.Pacote
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.css">
+</head>
+<body>
+
+<h4>Pacote</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FK_IdDestino" class="control-label"></label>
+                <input asp-for="FK_IdDestino" class="form-control" />
+                <span asp-validation-for="FK_IdDestino" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FK_IdCliente" class="control-label"></label>
+                <input asp-for="FK_IdCliente" class="form-control" />
+                <span asp-validation-for="FK_IdCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="qtdePessoas" class="control-label"></label>
+                <input asp-for="qtdePessoas" class="form-control" />
+                <span asp-validation-for="qtdePessoas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="qtdeDias" class="control-label"></label>
+                <input asp-for="qtdeDias" class="form-control" />
+                <span asp-validation-for="qtdeDias" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+</body>
+</html>

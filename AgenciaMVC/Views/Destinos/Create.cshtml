@@ -1,0 +1,65 @@
+@model AgenciaMVC.Models.Destino
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.css">
+</head>
+<body>
+
+<h4>Destino</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="nomeDestino" class="control-label"></label>
+                <input asp-for="nomeDestino" class="form-control" />
+                <span asp-validation-for="nomeDestino" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="estadoDestino" class="control-label"></label>
+                <input asp-for="estadoDestino" class="form-control" />
+                <span asp-validation-for="estadoDestino" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="paisDestino" class="control-label"></label>
+                <input asp-for="paisDestino" class="form-control" />
+                <span asp-validation-for="paisDestino" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="valorDiaria" class="control-label"></label>
+                <input asp-for="valorDiaria" class="form-control" />
+                <span asp-validation-for="valorDiaria" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="dataInicio" class="control-label"></label>
+                <input asp-for="dataInicio" class="form-control" />
+                <span asp-validation-for="dataInicio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="dataFinal" class="control-label"></label>
+                <input asp-for="dataFinal" class="form-control" />
+                <span asp-validation-for="dataFinal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+</body>
+</html>
